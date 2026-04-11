@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Current projects by J World Creations.">
+  <title>Projects | J World Creations</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="J World Creations home">
+        <span class="brand-mark" aria-hidden="true">JW</span>
+        <span class="brand-text">J World Creations</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav">Menu</button>
+      <nav id="primaryNav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="section">
+    <div class="container">
+      <h1>Projects</h1>
+      <p class="page-intro">A growing collection of independent projects across practical tools, apps, and games.</p>
+
+      <div class="project-list">
+        <article class="project-card project-row project-card-highlight">
+          <div>
+            <span class="tag">Platform</span>
+            <h2>EV Revival</h2>
+            <p>Revive your Vestel charger. EV Revival helps users of compatible Vestel chargers with setup guidance and provides app features for scheduling, RFID management, and fault information where supported.</p>
+          </div>
+          <a class="btn btn-primary" href="https://ev.jworldcreations.com/index.html" target="_blank" rel="noopener noreferrer">Open EV Revival</a>
+        </article>
+
+        <article class="project-card project-row">
+          <div>
+            <span class="tag">Mobile App</span>
+            <h2>Darts Master</h2>
+            <p>A darts scoring and practice app for players who want a simple, reliable way to track games and improve.</p>
+          </div>
+          <a class="btn btn-secondary" href="https://play.google.com/store/apps/details?id=com.jworldcreations.dartsmaster&pcampaignid=web_share" target="_blank" rel="noopener noreferrer">View on Google Play</a>
+        </article>
+
+        <article class="project-card project-row">
+          <div>
+            <span class="tag">Game</span>
+            <h2>Overrun</h2>
+            <p>A fast-paced mobile game designed for quick sessions, challenge, and high replayability.</p>
+          </div>
+          <a class="btn btn-secondary" href="https://play.google.com/store/apps/details?id=com.jworldcreations.overrun&pcampaignid=web_share" target="_blank" rel="noopener noreferrer">View on Google Play</a>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="year"></span> J World Creations</p>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
