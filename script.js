@@ -14,6 +14,13 @@
       menuToggle.setAttribute('aria-expanded', String(isOpen));
     });
 
+    document.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape' || !primaryNav.classList.contains('open')) return;
+      primaryNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.focus();
+    });
+
     primaryNav.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
         primaryNav.classList.remove('open');
@@ -31,7 +38,7 @@
     toggleBackToTop();
 
     backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
     });
   }
 })();
