@@ -306,6 +306,10 @@ h2 {
   background: var(--surface);
 }
 
+.site-footer ul {
+  flex-wrap: wrap;
+}
+
 .footer-content {
   min-height: 84px;
   display: flex;
