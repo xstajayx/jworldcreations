@@ -310,6 +310,12 @@ h2 {
   flex-wrap: wrap;
 }
 
+.site-footer nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
 .footer-content {
   min-height: 84px;
   display: flex;
@@ -372,4 +378,17 @@ h2 {
   .hero {
     padding-top: 4.4rem;
   }
+}
+
+.help-legal-nav ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: .5rem 1rem;
+  padding: 0;
+  list-style: none;
+}
+.help-legal-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
 }
