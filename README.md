@@ -21,24 +21,17 @@ This site acts as the umbrella landing page for independent projects by J World 
 
 ## Deploying to GitHub Pages
 
-1. Push this repository to GitHub.
-2. In GitHub, open **Settings → Pages**.
-3. Under **Build and deployment**, set:
-   - **Source**: Deploy from a branch
-   - **Branch**: `main` (or your default branch), folder `/ (root)`
-4. Save and wait for GitHub Pages to publish.
-5. Confirm the published URL loads correctly.
-
-## Custom domain (GoDaddy later)
-
-When ready to point your domain from GoDaddy:
-
-1. In GitHub Pages settings, add a custom domain:
-   - Suggested primary host: `www.jworldcreations.com`
-2. In GoDaddy DNS:
-   - Add/confirm a `CNAME` record for `www` pointing to `<your-github-username>.github.io`.
-   - For root (`jworldcreations.com`), use a redirect/forwarding approach to `https://www.jworldcreations.com` (or use A/ALIAS setup if preferred).
-3. Enable HTTPS in GitHub Pages once DNS has propagated.
+1. In **Settings → Secrets and variables → Actions**, add repository secrets
+   `JWORLD_OPERATOR_NAME` and `JWORLD_BUSINESS_ADDRESS`. Enter the approved legal
+   name and the approved address on separate lines in the address secret,
+   without the country line. The build appends United Kingdom.
+2. With release approval, set **Settings → Pages → Build and deployment →
+   Source** to **GitHub Actions**. Retain the existing custom domain and HTTPS.
+3. Merge the approved release to `main`, or run **Deploy JWorldCreations Pages**
+   from `main` in **Actions** if already merged. The workflow sets
+   `JWORLD_PUBLISH_DISCLOSURE=1` and fails before upload if details are missing.
+4. Verify the published Business Information page and privacy policy. Keep
+   the disclosure out of screenshots, logs and issue or pull request text.
 
 ## Notes
 
@@ -57,6 +50,5 @@ Names and addresses are rendered only in `business-information.html`. Without
 the flag the review artifact omits personal details. The page is accessible
 without an account, and its noindex directive cannot guarantee privacy.
 
-The current branch-based deployment does not run this private build. Arrange
-an approved artifact-based release separately. Keep transactional disclosures
+Branch-based deployment does not run this build. Keep transactional disclosures
 and release configuration out of public source history.
